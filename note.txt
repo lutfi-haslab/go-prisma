@@ -1,0 +1,10 @@
+run in dev mode using nodemon
+nodemon --exec go run main.go --signal SIGTERM
+
+go run github.com/steebchen/prisma-client-go db push
+go run github.com/steebchen/prisma-client-go db pull
+go run github.com/steebchen/prisma-client-go generate
+
+update package
+go mod tidy
+go build -o myapp
